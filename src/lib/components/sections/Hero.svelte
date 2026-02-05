@@ -25,18 +25,18 @@
   <!-- Content - Organic Positioning -->
   <div class="relative z-20 px-4" style="margin-left: -3vw; margin-top: -2vh;">
     <h1
-      class="font-display font-bold transition-all duration-1000 pointer-events-none"
+      class="font-display font-planet-kosmos transition-all duration-1000 pointer-events-none"
       class:opacity-0={!mounted}
       class:translate-y-10={!mounted}
       class:opacity-100={mounted}
       class:translate-y-0={mounted}
-      style="font-size: clamp(3rem, 14vw, 10rem); letter-spacing: -0.03em; line-height: 0.85; transform: rotate(-0.5deg);"
+      style="font-size: clamp(2rem, 10vw, 7rem); letter-spacing: -0.03em; line-height: 0.85; transform: rotate(-0.5deg);"
     >
-      <span class="gradient-text">::desync</span>
+      <span class="gradient-text">desync</span>
     </h1>
 
     <p
-      class="text-sm md:text-base text-foreground/30 transition-all duration-1000 delay-200 pointer-events-none tracking-[0.3em]"
+      class="text-sm md:text-base text-foreground/30 font-display transition-all duration-1000 delay-200 pointer-events-none tracking-wide"
       class:opacity-0={!mounted}
       class:translate-y-10={!mounted}
       class:opacity-100={mounted}

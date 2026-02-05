@@ -31,9 +31,9 @@
     <!-- Logo -->
     <a
       href="/"
-      class="text-2xl font-display font-bold gradient-text no-underline"
+      class="text-2xl font-display font-planet-kosmos gradient-text no-underline"
     >
-      ://desync
+      desync
     </a>
 
     <!-- Desktop Navigation -->

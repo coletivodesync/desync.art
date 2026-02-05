@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte';
 	import BackgroundShader from './BackgroundShader.svelte';
 	import HalftoneOverlay from './HalftoneOverlay.svelte';
-	import Particles from './Particles.svelte';
 
 	let mounted = $state(false);
 
@@ -17,7 +16,6 @@
 		<Canvas>
 			<BackgroundShader />
 			<HalftoneOverlay />
-			<Particles count={3000} />
 		</Canvas>
 	</div>
 {/if}

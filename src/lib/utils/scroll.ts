@@ -2,12 +2,13 @@ import Lenis from 'lenis';
 
 export function initSmoothScroll() {
 	const lenis = new Lenis({
-		duration: 0.9,
-		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+		duration: 0.3,
+		easing: (t) => t, // Linear for immediate response
 		orientation: 'vertical',
-		smoothWheel: true,
-		wheelMultiplier: 1,
-		touchMultiplier: 2
+		smoothWheel: false, // Disable smooth wheel for snappier feel
+		wheelMultiplier: 1.5,
+		touchMultiplier: 2.5,
+		syncTouch: true
 	});
 
 	function raf(time: number) {
