@@ -1,4 +1,4 @@
-name: Build and Deploy Zola Site
+name: Build and Deploy SvelteKit Site
 
 on:
   push:
@@ -11,14 +11,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
-      - name: Install Zola
-        uses: taiki-e/install-action@zola
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Build Site
-        run: zola build
+        run: pnpm build
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
@@ -27,7 +35,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.VPS_HOST }}
           REMOTE_USER: ${{ secrets.VPS_USER }}
           REMOTE_PORT: ${{ secrets.VPS_PORT }}
-          TARGET: ${{ secrets.VPS_TARGET_DIR }}/public
-          SOURCE: "public/"
-          EXCLUDE: "/.git/, /.github/, /.obsidian/"
+          TARGET: ${{ secrets.VPS_TARGET_DIR }}
+          SOURCE: "build/"
+          EXCLUDE: "/.git/, /.github/"
           ARGS: "-rltgoDzvO --delete"
