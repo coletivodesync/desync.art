@@ -35,7 +35,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.VPS_HOST }}
           REMOTE_USER: ${{ secrets.VPS_USER }}
           REMOTE_PORT: ${{ secrets.VPS_PORT }}
-          TARGET: ${{ secrets.VPS_TARGET_DIR }}
+          TARGET: ${{ secrets.VPS_TARGET_DIR }}/public
           SOURCE: "build/"
           EXCLUDE: "/.git/, /.github/"
           ARGS: "-rltgoDzvO --delete"

@@ -7,13 +7,13 @@
           desync
         </h3>
         <p class="text-text-secondary text-sm">
-          Electronic music collective in João Pessoa, Brazil.
+          Coletivo de música eletrônica em João Pessoa.
         </p>
       </div>
 
       <!-- Links -->
       <div>
-        <h4 class="font-display font-semibold mb-4">Connect</h4>
+        <h4 class="font-display font-semibold mb-4">Conecta</h4>
         <div class="flex flex-col gap-2">
           <a
             href="https://instagram.com/desync.collective"
@@ -45,15 +45,15 @@
       <!-- Info -->
       <div>
         <h4 class="font-display font-semibold mb-4">Info</h4>
-        <p class="text-text-secondary text-sm mb-2">João Pessoa, PB, Brazil</p>
-        <p class="text-text-secondary text-sm">Community-first, inclusive</p>
+        <p class="text-text-secondary text-sm mb-2">João Pessoa, PB</p>
+        <p class="text-text-secondary text-sm">Comunidade em primeiro lugar, inclusivo</p>
       </div>
     </div>
 
     <!-- Bottom -->
     <div class="mt-12 pt-8 border-t border-white/10 text-center">
       <p class="text-text-secondary text-sm">
-        © {new Date().getFullYear()} Desync Collective. All rights reserved.
+        © {new Date().getFullYear()} Desync Collective. Todos os direitos reservados.
       </p>
     </div>
   </div>

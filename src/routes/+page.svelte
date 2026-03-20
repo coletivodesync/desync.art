@@ -93,14 +93,14 @@
       class="font-display font-bold text-7xl md:text-9xl mb-24 gradient-text"
       style="letter-spacing: -0.05em; transform: rotate(-1deg);"
     >
-      desynchronize
+      dessincronize
     </h2>
 
     <!-- Asymmetric Values -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
       <div class="md:col-span-3 md:col-start-2 transform md:-rotate-2">
         <h3 class="font-display text-5xl font-bold mb-3 text-desync-magenta">
-          in
+          em
         </h3>
         <p class="text-foreground/60 text-sm" style="margin-left: 7px;">
           joão pessoa,
@@ -113,27 +113,27 @@
           dance
         </h3>
         <p class="text-foreground/60 text-sm" style="margin-left: 3px;">
-          to what's best with
+          com o melhor do
         </p>
       </div>
       <div
         class="md:col-span-3 md:col-start-10 transform md:rotate-1 md:-translate-y-6"
       >
         <h3 class="font-display text-5xl font-bold mb-3 text-desync-magenta">
-          sound
+          som
         </h3>
         <p class="text-foreground/60 text-sm" style="margin-left: 11px;">
-          quality and
+          qualidade e
         </p>
       </div>
       <div
         class="md:col-span-5 md:col-start-6 transform md:-rotate-z-5 md:translate-y-16"
       >
         <h3 class="font-display text-6xl font-bold mb-3 text-desync-magenta">
-          attention
+          atenção
         </h3>
         <p class="text-foreground/60 text-sm" style="margin-left: 11px;">
-          to detail.
+          aos detalhes.
         </p>
       </div>
     </div>
@@ -209,7 +209,7 @@
           class="text-text-secondary/30 text-xs mt-1"
           style="margin-left: 5px;"
         >
-          Explore your true form
+          explore sua verdadeira forma
         </p>
       </div>
     </div>
@@ -233,7 +233,7 @@
           class="text-text-secondary/30 text-xs mt-1"
           style="margin-right: 5px;"
         >
-          Dance until it's day
+          dance sem parar
         </p>
       </div>
     </div>
@@ -296,13 +296,13 @@
         class="font-display font-bold text-7xl md:text-9xl mb-6 gradient-text"
         style="letter-spacing: -0.04em;"
       >
-        Events
+        Eventos
       </h2>
       <p
         class="text-foreground/30 text-xs tracking-[0.3em] uppercase mb-12"
         style="margin-left: 9px;"
       >
-        Quarterly / Shotgun
+        Trimestral / Shotgun
       </p>
       <div style="margin-left: 23px;">
         <a
@@ -395,13 +395,13 @@
           class="font-display font-bold text-2xl mb-2"
           style="margin-left: 3px;"
         >
-          Latest
+          Recente
         </h3>
         <p
           class="text-foreground/40 text-xs tracking-wider"
           style="margin-left: 7px;"
         >
-          Coming soon
+          Em breve
         </p>
       </div>
 
@@ -423,13 +423,13 @@
           class="font-display font-bold text-2xl mb-2 text-right"
           style="margin-right: 5px;"
         >
-          Archive
+          Arquivo
         </h3>
         <p
           class="text-foreground/40 text-xs tracking-wider text-right"
           style="margin-right: 9px;"
         >
-          Previous sets
+          Sets anteriores
         </p>
       </div>
 
@@ -451,82 +451,5 @@
         </a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Newsletter Section - Raw -->
-<section
-  id="newsletter"
-  class="py-32 px-6 md:px-12 border-t border-desync-magenta/10 relative overflow-hidden"
->
-  <div
-    class="absolute bottom-0 left-0 w-2/3 h-32 bg-desync-magenta/5 transform -skewX-12"
-  ></div>
-  <!-- Organic branches - left -->
-  <svg
-    class="absolute left-0 top-1/2 w-28 h-56 opacity-30"
-    viewBox="0 0 100 200"
-  >
-    <path
-      d="M 15 0 Q 35 60, 20 120 T 30 200"
-      stroke="#4D3F9F"
-      stroke-width="3"
-      fill="none"
-      opacity="0.8"
-    />
-    <path
-      d="M 15 0 Q 10 70, 25 130 T 15 200"
-      stroke="#4D3F9F"
-      stroke-width="2"
-      fill="none"
-      opacity="0.6"
-    />
-  </svg>
-  <!-- Organic branches - right -->
-  <svg
-    class="absolute right-0 top-20 w-32 h-64 opacity-30"
-    viewBox="0 0 100 200"
-  >
-    <path
-      d="M 85 0 Q 65 60, 80 120 T 70 200"
-      stroke="#6B5444"
-      stroke-width="3"
-      fill="none"
-      opacity="0.8"
-    />
-    <path
-      d="M 85 0 Q 90 70, 75 130 T 85 200"
-      stroke="#6B5444"
-      stroke-width="2"
-      fill="none"
-      opacity="0.6"
-    />
-  </svg>
-
-  <div class="max-w-4xl mx-auto relative z-10">
-    <h3
-      class="font-display text-6xl md:text-7xl font-bold mb-12 gradient-text transform -rotate-1"
-      style="letter-spacing: -0.04em; margin-left: 13px;"
-    >
-      Join
-    </h3>
-    <form
-      class="flex gap-3 max-w-lg"
-      on:submit|preventDefault={() => alert("Soon")}
-      style="margin-left: 19px;"
-    >
-      <input
-        type="email"
-        placeholder="email"
-        required
-        class="flex-1 px-5 py-4 rounded bg-white/5 border border-white/10 text-foreground placeholder-text-secondary/30 focus:outline-none focus:border-desync-magenta transition-colors font-mono text-sm tracking-wider"
-      />
-      <button
-        type="submit"
-        class="btn-primary px-8 transform hover:-rotate-2 transition-all"
-      >
-        →
-      </button>
-    </form>
   </div>
 </section>
