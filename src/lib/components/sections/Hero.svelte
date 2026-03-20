@@ -30,9 +30,9 @@
       class:translate-y-10={!mounted}
       class:opacity-100={mounted}
       class:translate-y-0={mounted}
-      style="font-size: clamp(2rem, 10vw, 7rem); letter-spacing: -0.03em; line-height: 1; padding-bottom: 0.05em; transform: rotate(-0.5deg);"
+      style="font-size: clamp(2rem, 10vw, 7rem); letter-spacing: -0.03em; line-height: 1; padding-bottom: 0.05em; overflow: visible; transform: rotate(-0.5deg);"
     >
-      <span class="gradient-text">desync</span>
+      <span class="gradient-text" style="display: inline-block; padding: 0.3em 0.5em 0 0;">desync</span>
     </h1>
   </div>
 
