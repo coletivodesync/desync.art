@@ -13,21 +13,22 @@
 
 /* Desync Design System - Color Palette & Theme */
 @theme {
-  /* Brand Colors (Vibrant Versions) */
-  --color-desync-magenta: #e83fc7;
-  --color-desync-dark-blue: #2a4a7a;
-  --color-desync-brown: #6b5444;
-  --color-desync-deep-purple: #4d3f9f;
+  /* Brand Colors — Underground / Hypnotic / Tribal */
+  --color-desync-crimson: #b32e6b;
+  --color-desync-ember: #b85a1e;
+  --color-desync-moss: #2a3a28;
+  --color-desync-smoke: #3a2a20;
 
   /* Base Colors */
-  --color-background: #0a0e14;
-  --color-foreground: #e8e6e3;
-  --color-text-secondary: #a0a8b8;
+  --color-background: #080604;
+  --color-foreground: #c8c0b4;
+  --color-text-secondary: #7a7468;
 
   /* Typography */
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-display: ui-monospace, "Courier New", monospace;
   --font-planet-kosmos: "Planet Kosmos", ui-monospace, "Courier New", monospace;
+  --font-chakra: "Chakra Petch", ui-sans-serif, system-ui, sans-serif;
 
   /* Custom Animations */
   --animate-pulse-slow: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -73,7 +74,6 @@
 
   html {
     scroll-behavior: auto;
-    scroll-snap-type: y proximity;
   }
 
   body {
@@ -84,11 +84,6 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  section {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
   }
 
   h1,
@@ -122,13 +117,13 @@
   }
 
   a {
-    color: var(--color-desync-magenta);
+    color: var(--color-desync-crimson);
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   a:hover {
-    color: var(--color-desync-deep-purple);
+    color: var(--color-desync-ember);
   }
 }
 
@@ -163,8 +158,8 @@
   .gradient-text {
     background: linear-gradient(
       to right,
-      var(--color-desync-magenta),
-      var(--color-desync-deep-purple)
+      var(--color-desync-crimson),
+      var(--color-desync-ember)
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -179,7 +174,7 @@
 
   .btn-primary {
     padding: 0.75rem 1.5rem;
-    background-color: var(--color-desync-magenta);
+    background-color: var(--color-desync-crimson);
     color: white;
     border-radius: 2px;
     font-weight: 600;
@@ -190,13 +185,13 @@
   }
 
   .btn-primary:hover {
-    background-color: #c335af;
-    box-shadow: 0 4px 12px rgba(232, 63, 199, 0.2);
+    background-color: #922558;
+    box-shadow: 0 4px 12px rgba(179, 46, 107, 0.3);
     transform: translateY(-1px);
   }
 
   .btn-primary:focus {
-    outline: 2px solid var(--color-desync-magenta);
+    outline: 2px solid var(--color-desync-crimson);
     outline-offset: 2px;
   }
 
@@ -204,7 +199,7 @@
     padding: 0.75rem 1.5rem;
     background-color: transparent;
     color: var(--color-foreground);
-    border: 1px solid var(--color-desync-magenta);
+    border: 1px solid var(--color-desync-crimson);
     border-radius: 2px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -213,8 +208,8 @@
   }
 
   .btn-secondary:hover {
-    background-color: var(--color-desync-magenta);
-    box-shadow: 0 4px 12px rgba(232, 63, 199, 0.15);
+    background-color: var(--color-desync-crimson);
+    box-shadow: 0 4px 12px rgba(179, 46, 107, 0.2);
   }
 }
 
@@ -254,7 +249,7 @@
     overflow: visible;
     clip: auto;
     white-space: normal;
-    background-color: var(--color-desync-magenta);
+    background-color: var(--color-desync-crimson);
     color: white;
   }
 
@@ -267,7 +262,7 @@
     content: attr(data-text);
     position: absolute;
     left: -2px;
-    text-shadow: -1px 0 var(--color-desync-magenta);
+    text-shadow: -1px 0 var(--color-desync-crimson);
     animation: glitch-anim-1 2.5s infinite;
     clip: rect(0, 900px, 0, 0);
     opacity: 0.7;
@@ -277,7 +272,7 @@
     content: attr(data-text);
     position: absolute;
     left: 2px;
-    text-shadow: 1px 0 var(--color-desync-deep-purple);
+    text-shadow: 1px 0 var(--color-desync-ember);
     animation: glitch-anim-2 2.8s infinite;
     clip: rect(0, 900px, 0, 0);
     opacity: 0.7;
