@@ -16,10 +16,10 @@
 
 <svelte:head>
   <link rel="icon" href={favicon} />
-  <title>Desync Collective – Electronic Music in João Pessoa</title>
+  <title>Desync Collective – Música Eletrônica em João Pessoa</title>
   <meta
     name="description"
-    content="Community-first electronic music collective bringing techno, experimental, and drum & bass to João Pessoa, Brazil."
+    content="Coletivo de música eletrônica focado em comunidade, trazendo techno, experimental e drum & bass pra João Pessoa."
   />
 </svelte:head>
 
