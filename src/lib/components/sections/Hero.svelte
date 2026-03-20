@@ -18,7 +18,7 @@
   {:else}
     <!-- Fallback gradient while mounting -->
     <div
-      class="absolute inset-0 bg-gradient-to-br from-desync-deep-purple/30 via-background to-desync-magenta/20"
+      class="absolute inset-0 bg-gradient-to-br from-desync-ember/30 via-background to-desync-crimson/20"
     ></div>
   {/if}
 
@@ -30,21 +30,10 @@
       class:translate-y-10={!mounted}
       class:opacity-100={mounted}
       class:translate-y-0={mounted}
-      style="font-size: clamp(2rem, 10vw, 7rem); letter-spacing: -0.03em; line-height: 0.85; transform: rotate(-0.5deg);"
+      style="font-size: clamp(2rem, 10vw, 7rem); letter-spacing: -0.03em; line-height: 1; padding-bottom: 0.05em; transform: rotate(-0.5deg);"
     >
       <span class="gradient-text">desync</span>
     </h1>
-
-    <p
-      class="text-sm md:text-base text-foreground/30 font-display transition-all duration-1000 delay-200 pointer-events-none tracking-wide"
-      class:opacity-0={!mounted}
-      class:translate-y-10={!mounted}
-      class:opacity-100={mounted}
-      class:translate-y-0={mounted}
-      style="margin-left: 17px; margin-top: -6px;"
-    >
-      explores joão pessoa
-    </p>
   </div>
 
   <!-- Scroll Indicator -->

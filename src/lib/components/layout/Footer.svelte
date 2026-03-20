@@ -13,13 +13,13 @@
 
       <!-- Links -->
       <div>
-        <h4 class="font-display font-semibold mb-4">Conecta</h4>
+        <h4 class="font-display font-semibold mb-4">Conecte</h4>
         <div class="flex flex-col gap-2">
           <a
-            href="https://instagram.com/desync.collective"
+            href="https://www.instagram.com/desync.coletivo/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-text-secondary hover:text-desync-magenta transition-colors text-sm"
+            class="text-text-secondary hover:text-desync-crimson transition-colors text-sm"
           >
             Instagram
           </a>
@@ -27,15 +27,15 @@
             href="https://ra.co/promoters/desync"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-text-secondary hover:text-desync-magenta transition-colors text-sm"
+            class="text-text-secondary hover:text-desync-crimson transition-colors text-sm"
           >
             Resident Advisor
           </a>
           <a
-            href="https://shotgun.live"
+            href="https://shotgun.live/en/venues/desync-collective"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-text-secondary hover:text-desync-magenta transition-colors text-sm"
+            class="text-text-secondary hover:text-desync-crimson transition-colors text-sm"
           >
             Shotgun
           </a>
@@ -46,7 +46,7 @@
       <div>
         <h4 class="font-display font-semibold mb-4">Info</h4>
         <p class="text-text-secondary text-sm mb-2">João Pessoa, PB</p>
-        <p class="text-text-secondary text-sm">Comunidade em primeiro lugar, inclusivo</p>
+        <p class="text-text-secondary text-sm">Comunidade em primeiro lugar</p>
       </div>
     </div>
 

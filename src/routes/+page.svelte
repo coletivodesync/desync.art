@@ -8,22 +8,24 @@
 
   onMount(() => {
     // Animate sections on scroll
-    gsap.utils.toArray("section:not(:first-child)").forEach((section: any) => {
-      gsap.from(section, {
-        opacity: 0,
-        y: 40,
-        duration: 0.7,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 75%",
-          toggleActions: "play none none reverse",
-        },
+    gsap.utils
+      .toArray<Element>("section:not(:first-child)")
+      .forEach((section) => {
+        gsap.from(section, {
+          opacity: 0,
+          y: 40,
+          duration: 0.7,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        });
       });
-    });
 
     // Animate cards/items with stagger
-    gsap.utils.toArray(".glassmorphism").forEach((card: any) => {
+    gsap.utils.toArray<Element>(".glassmorphism").forEach((card) => {
       gsap.from(card, {
         opacity: 0,
         y: 20,
@@ -54,14 +56,14 @@
   >
     <path
       d="M 10 0 Q 30 50, 15 100 T 25 200"
-      stroke="#E83FC7"
+      stroke="#b32e6b"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 10 0 Q 5 60, 20 120 T 10 200"
-      stroke="#E83FC7"
+      stroke="#b32e6b"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -74,14 +76,14 @@
   >
     <path
       d="M 90 0 Q 70 50, 85 100 T 75 200"
-      stroke="#4D3F9F"
+      stroke="#b85a1e"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 90 0 Q 95 60, 80 120 T 90 200"
-      stroke="#4D3F9F"
+      stroke="#b85a1e"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -90,50 +92,59 @@
 
   <div class="max-w-7xl mx-auto relative z-10">
     <h2
-      class="font-display font-bold text-7xl md:text-9xl mb-24 gradient-text"
-      style="letter-spacing: -0.05em; transform: rotate(-1deg);"
+      class="font-display font-bold mb-24 gradient-text"
+      style="font-size: clamp(2.5rem, 10vw, 8rem); letter-spacing: -0.05em; transform: rotate(-1deg);"
     >
       dessincronize
     </h2>
 
-    <!-- Asymmetric Values -->
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
-      <div class="md:col-span-3 md:col-start-2 transform md:-rotate-2">
-        <h3 class="font-display text-5xl font-bold mb-3 text-desync-magenta">
-          em
-        </h3>
-        <p class="text-foreground/60 text-sm" style="margin-left: 7px;">
-          joão pessoa,
-        </p>
-      </div>
-      <div class="md:col-span-4 md:col-start-6 transform md:translate-y-12">
+    <!-- Scattered values -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
+      <div class="md:col-span-5 md:col-start-1 transform md:-rotate-1">
         <h3
-          class="font-display text-5xl font-bold mb-3 text-desync-deep-purple"
+          class="font-display text-3xl md:text-4xl font-bold mb-2 text-desync-crimson"
         >
-          dance
+          música como ritual
         </h3>
-        <p class="text-foreground/60 text-sm" style="margin-left: 3px;">
-          com o melhor do
+        <p
+          class="text-foreground/40 text-sm md:text-base leading-relaxed"
+          style="margin-left: 4px;"
+        >
+          não é só uma festa. é aquele momento que vc fecha o olho e o som tá
+          passando pelo corpo inteiro. é isso que a gente quer criar.
         </p>
       </div>
       <div
-        class="md:col-span-3 md:col-start-10 transform md:rotate-1 md:-translate-y-6"
+        class="md:col-span-4 md:col-start-8 transform md:translate-y-16 md:rotate-0.5"
       >
-        <h3 class="font-display text-5xl font-bold mb-3 text-desync-magenta">
-          som
+        <h3
+          class="font-display text-3xl md:text-4xl font-bold mb-2 text-desync-ember"
+        >
+          raízes em joão pessoa
         </h3>
-        <p class="text-foreground/60 text-sm" style="margin-left: 11px;">
-          qualidade e
+        <p
+          class="text-foreground/40 text-sm md:text-base leading-relaxed"
+          style="margin-left: 3px;"
+        >
+          a cena underground aqui tá crescendo e a gente tá no meio disso.
+          trazendo o som que faz sentido pra quem sente. com o cuidado aos
+          detalhes e a qualidade que tanto amamos.
         </p>
       </div>
       <div
-        class="md:col-span-5 md:col-start-6 transform md:-rotate-z-5 md:translate-y-16"
+        class="md:col-span-5 md:col-start-3 transform md:translate-y-10 md:-rotate-0.5"
       >
-        <h3 class="font-display text-6xl font-bold mb-3 text-desync-magenta">
-          atenção
+        <h3
+          class="font-display text-3xl md:text-4xl font-bold mb-2 text-desync-crimson"
+        >
+          sem fórmula
         </h3>
-        <p class="text-foreground/60 text-sm" style="margin-left: 11px;">
-          aos detalhes.
+        <p
+          class="text-foreground/40 text-sm md:text-base leading-relaxed"
+          style="margin-left: 7px;"
+        >
+          techno, dub, experimental, drum n bass – a gente não fica preso em
+          gênero. o que importa é a energia, o resto a gente resolve na hora.
         </p>
       </div>
     </div>
@@ -143,7 +154,7 @@
 <!-- Party Series Section - Asymmetric -->
 <section id="parties" class="relative py-32 overflow-hidden">
   <div
-    class="absolute inset-0 bg-gradient-to-br from-desync-deep-purple/5 to-transparent"
+    class="absolute inset-0 bg-linear-to-br from-desync-ember/5 to-transparent"
     style="transform: skewY(-2deg);"
   ></div>
   <!-- Organic branches - left -->
@@ -153,14 +164,14 @@
   >
     <path
       d="M 15 0 Q 35 60, 20 120 T 30 200"
-      stroke="#2A4A7A"
+      stroke="#2a3a28"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 15 0 Q 10 70, 25 130 T 15 200"
-      stroke="#2A4A7A"
+      stroke="#2a3a28"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -173,14 +184,14 @@
   >
     <path
       d="M 85 0 Q 65 60, 80 120 T 70 200"
-      stroke="#E83FC7"
+      stroke="#b32e6b"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 85 0 Q 90 70, 75 130 T 85 200"
-      stroke="#E83FC7"
+      stroke="#b32e6b"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -190,50 +201,52 @@
   <div class="relative px-6 md:px-12 max-w-7xl mx-auto z-10">
     <!-- Deep - Left Heavy -->
     <div class="mb-32 md:mb-48 transform md:-translate-x-12">
-      <div
-        class="inline-block border-l-4 border-desync-deep-purple pl-8 md:pl-12"
-      >
+      <div class="inline-block border-l-4 border-desync-ember pl-8 md:pl-12">
         <h3
-          class="font-display font-bold text-6xl md:text-8xl mb-2 text-desync-deep-purple"
-          style="letter-spacing: -0.03em; line-height: 0.9;"
+          class="font-display font-bold mb-3 text-desync-ember"
+          style="font-size: clamp(3rem, 10vw, 6rem); letter-spacing: -0.03em; line-height: 0.9;"
         >
-          Deep
+          deep
         </h3>
         <p
-          class="text-foreground/40 text-sm tracking-widest uppercase"
+          class="text-foreground/30 text-xs tracking-widest lowercase mb-3"
           style="margin-left: 2px;"
         >
-          Experimental / Hypnotic Techno / Dub Techno
+          experimental · hypnotic techno · dub techno
         </p>
         <p
-          class="text-text-secondary/30 text-xs mt-1"
-          style="margin-left: 5px;"
+          class="text-foreground/40 text-sm md:text-base leading-relaxed max-w-md"
+          style="margin-left: 3px;"
         >
-          explore sua verdadeira forma
+          aquele tipo de som que vc não escuta, vc sente. fecha o olho e deixa o
+          grave te levar. sem pressa, sem destino.
         </p>
       </div>
     </div>
 
-    <!-- Breakbeat - Right Heavy -->
-    <div class="text-right transform md:translate-x-12">
-      <div class="inline-block border-r-4 border-desync-magenta pr-8 md:pr-12">
+    <!-- Jungle - Right Heavy -->
+    <div class="text-left md:text-right transform md:translate-x-12">
+      <div
+        class="inline-block border-l-4 md:border-l-0 md:border-r-4 border-desync-crimson pl-8 md:pl-0 md:pr-12"
+      >
         <h3
-          class="font-display font-bold text-6xl md:text-8xl mb-2 text-desync-magenta"
-          style="letter-spacing: -0.03em; line-height: 0.9;"
+          class="font-display font-bold mb-3 text-desync-crimson"
+          style="font-size: clamp(3rem, 10vw, 6rem); letter-spacing: -0.03em; line-height: 0.9;"
         >
-          Jungle
+          jungle
         </h3>
         <p
-          class="text-foreground/40 text-sm tracking-widest uppercase"
+          class="text-foreground/30 text-xs tracking-widest lowercase mb-3"
           style="margin-right: 2px;"
         >
-          Drum & Bass / UK Garage
+          drum & bass · uk garage
         </p>
         <p
-          class="text-text-secondary/30 text-xs mt-1"
-          style="margin-right: 5px;"
+          class="text-foreground/40 text-sm md:text-base leading-relaxed max-w-md md:ml-auto"
+          style=""
         >
-          dance sem parar
+          o break cai e teu corpo já sabe o que fazer. é instinto, é caos
+          organizado. não tem como ficar parado.
         </p>
       </div>
     </div>
@@ -246,7 +259,7 @@
   class="py-24 md:py-40 px-6 md:px-12 relative overflow-hidden"
 >
   <div
-    class="absolute top-0 right-0 w-1/3 h-full bg-desync-magenta/5"
+    class="absolute top-0 right-0 w-1/3 h-full bg-desync-crimson/5"
     style="transform: skewX(-12deg) translateX(20%);"
   ></div>
   <!-- Organic branches - left -->
@@ -256,14 +269,14 @@
   >
     <path
       d="M 10 0 Q 30 50, 15 100 T 25 200"
-      stroke="#6B5444"
+      stroke="#3a2a20"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 10 0 Q 5 60, 20 120 T 10 200"
-      stroke="#6B5444"
+      stroke="#3a2a20"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -276,14 +289,14 @@
   >
     <path
       d="M 90 0 Q 70 50, 85 100 T 75 200"
-      stroke="#4D3F9F"
+      stroke="#b85a1e"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 90 0 Q 95 60, 80 120 T 90 200"
-      stroke="#4D3F9F"
+      stroke="#b85a1e"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -293,25 +306,34 @@
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="transform md:-rotate-1">
       <h2
-        class="font-display font-bold text-7xl md:text-9xl mb-6 gradient-text"
-        style="letter-spacing: -0.04em;"
+        class="font-display font-bold mb-6 gradient-text"
+        style="font-size: clamp(3rem, 12vw, 8rem); letter-spacing: -0.04em;"
       >
-        Eventos
+        eventos
       </h2>
       <p
-        class="text-foreground/30 text-xs tracking-[0.3em] uppercase mb-12"
-        style="margin-left: 9px;"
+        class="text-foreground/40 text-sm md:text-base leading-relaxed max-w-lg mb-10"
+        style="margin-left: 5px;"
       >
-        Trimestral / Shotgun
+        a gente faz evento quando faz sentido, não por calendário. quando
+        acontece, vocês podem acompanhar pelo Shotgun e Resident Advisor.
       </p>
-      <div style="margin-left: 23px;">
+      <div class="flex flex-wrap gap-4" style="margin-left: 5px;">
         <a
-          href="https://shotgun.live"
+          href="https://shotgun.live/en/venues/desync-collective"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-primary inline-block transform hover:rotate-1 transition-transform"
         >
-          Shotgun
+          shotgun
+        </a>
+        <a
+          href="https://ra.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary inline-block transform hover:-rotate-1 transition-transform"
+        >
+          resident advisor
         </a>
       </div>
     </div>
@@ -324,7 +346,7 @@
   class="py-32 md:py-48 px-6 md:px-12 relative overflow-hidden"
 >
   <div
-    class="absolute inset-0 bg-gradient-to-tr from-background via-desync-brown/5 to-background"
+    class="absolute inset-0 bg-linear-to-tr from-background via-desync-smoke/5 to-background"
   ></div>
   <!-- Organic branches - left -->
   <svg
@@ -333,14 +355,14 @@
   >
     <path
       d="M 10 0 Q 30 50, 15 100 T 25 200"
-      stroke="#E83FC7"
+      stroke="#b32e6b"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 10 0 Q 5 60, 20 120 T 10 200"
-      stroke="#E83FC7"
+      stroke="#b32e6b"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -353,14 +375,14 @@
   >
     <path
       d="M 90 0 Q 70 50, 85 100 T 75 200"
-      stroke="#2A4A7A"
+      stroke="#2a3a28"
       stroke-width="3"
       fill="none"
       opacity="0.8"
     />
     <path
       d="M 90 0 Q 95 60, 80 120 T 90 200"
-      stroke="#2A4A7A"
+      stroke="#2a3a28"
       stroke-width="2"
       fill="none"
       opacity="0.6"
@@ -369,87 +391,35 @@
 
   <div class="relative max-w-7xl mx-auto z-10">
     <h2
-      class="font-display font-bold text-8xl md:text-9xl mb-20 gradient-text text-right transform rotate-1"
-      style="letter-spacing: -0.05em; margin-right: -3px;"
+      class="font-display font-bold mb-8 gradient-text text-right transform rotate-1"
+      style="font-size: clamp(3.5rem, 14vw, 8rem); letter-spacing: -0.05em; margin-right: -3px;"
     >
-      Mixes
+      mixes
     </h2>
 
-    <!-- Asymmetric Cards -->
-    <div class="space-y-16 md:space-y-0">
-      <!-- Latest Mix - Top Left -->
-      <div
-        class="glassmorphism p-8 max-w-md transform md:-translate-x-8 hover:border-desync-magenta/50 transition-all drift"
-        style="margin-left: 17px;"
+    <div class="max-w-lg ml-auto text-right transform md:rotate-0.5">
+      <p
+        class="text-foreground/40 text-sm md:text-base leading-relaxed mb-10"
+        style="margin-right: 5px;"
       >
-        <div
-          class="aspect-square bg-gradient-to-br from-desync-magenta/20 to-desync-deep-purple/20 mb-6 flex items-center justify-center transform -rotate-1"
-        >
-          <div
-            class="text-desync-magenta/30 text-6xl font-display pulse-irregular"
-          >
-            01
-          </div>
-        </div>
-        <h3
-          class="font-display font-bold text-2xl mb-2"
-          style="margin-left: 3px;"
-        >
-          Recente
-        </h3>
-        <p
-          class="text-foreground/40 text-xs tracking-wider"
-          style="margin-left: 7px;"
-        >
-          Em breve
-        </p>
-      </div>
-
-      <!-- Archive - Bottom Right -->
-      <div
-        class="glassmorphism p-8 max-w-md ml-auto transform md:translate-x-12 md:-translate-y-24 hover:border-desync-deep-purple/50 transition-all drift"
-        style="margin-right: 11px;"
+        sets gravados, sessões ao vivo, o que a gente tá ouvindo, o que a gente
+        tá fazendo. tudo para lá, no SoundCloud.
+      </p>
+      <p
+        class="text-foreground/20 text-xs leading-relaxed mb-8"
+        style="margin-right: 5px;"
       >
-        <div
-          class="aspect-square bg-gradient-to-br from-desync-deep-purple/20 to-desync-dark-blue/20 mb-6 flex items-center justify-center transform rotate-2"
-        >
-          <div
-            class="text-desync-deep-purple/30 text-6xl font-display pulse-irregular"
-          >
-            ∞
-          </div>
-        </div>
-        <h3
-          class="font-display font-bold text-2xl mb-2 text-right"
-          style="margin-right: 5px;"
-        >
-          Arquivo
-        </h3>
-        <p
-          class="text-foreground/40 text-xs tracking-wider text-right"
-          style="margin-right: 9px;"
-        >
-          Sets anteriores
-        </p>
-      </div>
-
-      <!-- SoundCloud - Floating -->
-      <div
-        class="text-center md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 transform rotate-0 md:rotate-3"
+        (a gente finge que vai fazer uma rádio mas nada confirmado ainda)
+      </p>
+      <a
+        href="https://soundcloud.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary inline-block transform hover:-rotate-1 transition-transform"
+        style="margin-right: 5px;"
       >
-        <a
-          href="https://soundcloud.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block glassmorphism px-12 py-8 hover:border-desync-magenta/50 transition-all group"
-        >
-          <h3
-            class="font-display font-bold text-4xl gradient-text group-hover:scale-110 transition-transform inline-block"
-          >
-            SoundCloud
-          </h3>
-        </a>
-      </div>
+        soundcloud
+      </a>
     </div>
   </div>
 </section>

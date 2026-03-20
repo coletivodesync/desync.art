@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte';
 	import BackgroundShader from './BackgroundShader.svelte';
 	import HalftoneOverlay from './HalftoneOverlay.svelte';
-
 	let mounted = $state(false);
 
 	onMount(() => {

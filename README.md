@@ -1,38 +1,38 @@
-# sv
+# desync.art
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+website for desync collective. techno & dnb music from joão pessoa, pb.
 
-## Creating a project
+## stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- svelte 5 + sveltekit (static adapter)
+- tailwind css 4
+- three.js + threlte (webgl shaders)
+- gsap (scroll animations)
 
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## dev
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun install
+bun run dev
 ```
 
-## Building
-
-To create a production version of your app:
+## build
 
 ```sh
-npm run build
+bun run build
 ```
 
-You can preview the production build with `npm run preview`.
+output goes to `build/`. serve it with any static file server (caddy, nginx, etc).
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## checks
+
+```sh
+bun run check   # svelte-check
+bun run lint    # prettier + eslint
+```
+
+these run automatically on pre-commit via lefthook.
+
+## deploy
+
+pushes to `main` trigger a github actions workflow that checks, builds, and deploys to the vps via ssh.
